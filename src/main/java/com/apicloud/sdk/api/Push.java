@@ -61,7 +61,7 @@ public class Push {
 		params.put("groupName", groupName);
 		params.put("userIds", userIds);
 		String url = domain+"/api/push/message";
-		
+		headers.put("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
 		return HttpUtils.doPost(url, headers, params, "");
 	}
 }
